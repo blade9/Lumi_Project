@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    background: #111;
+    color: #fff;
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+h1 {
+    text-align: center;
+    font-weight: lighter;
+}
+
+/* Layout with sprites and story area */
+.game-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.sprite {
+    width: 20%;
+    text-align: center;
+}
+
+.sprite img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Story in the center */
+.story-container {
+    width: 60%;
+    background: #222;
+    padding: 20px;
+    border-radius: 10px;
+    overflow-y: scroll; 
+    max-height: 90vh;
+  
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .story-container::-webkit-scrollbar {
+    display: none; 
+  }
+  
+
+.story-container p {
+    margin: 0;
+    padding: 10px 0;
+    line-height: 1.5;
+    opacity: 0.5;
+    transition: opacity 1s ease-in-out;
+}
+
+.story-container p.show {
+    opacity: 1;
+}
+
+p.fade-in {
+    opacity: 0.0;
+}
+p.show {
+    opacity: 1.0;
+}
+
+p.choice {
+    text-align: center;
+}
+
+a, p {
+    color: gray;
+    line-height: 1.7em;
+    font-size: 13pt;
+}
+
+a:hover {
+    color: black;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 768px) {
+    .game-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sprite, .story-container {
+        width: 100%;
+    }
+
+    .sprite {
+        margin-bottom: 10px;
+    }
+}

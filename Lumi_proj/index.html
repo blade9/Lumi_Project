@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lumi</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <body>
+    <div class="game-layout">
+      <!-- Left player sprite -->
+      <div class="sprite left-sprite">
+        <img src="roy.png" alt="Player 1">
+      </div>
+  
+      <!-- Story content -->
+      <div id="story" class="story-container">
+        <h1>Lumi</h1>
+        <!-- Story will be injected here -->
+      </div>
+  
+      <!-- Right player sprite -->
+      <div class="sprite right-sprite">
+        <img src="lucy.png" alt="Player 2">
+      </div>
+    </div>
+  
+    <script src="ink.js"></script>
+    <script src="story.js"></script>
+    <script src="main.js"></script>
+  </body>
+  
+
+
+  <script src="ink.js"></script>
+  <script src="Lumi.js"></script> <!-- contains `const storyContent = {...}` -->
+  <script src="main.js"></script>  <!-- your script that uses storyContent -->
+</body>
+</html>
